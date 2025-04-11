@@ -1,0 +1,30 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/handsfree/handsfree/handsfree_ros_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/handsfree/handsfree/handsfree_ros_ws/src/handsfree/handsfree_driver/astra_camera/include/**",
+        "/home/handsfree/handsfree/handsfree_ros_ws/src/handsfree/handsfree_driver/fdilink_ahrs-demo/include/**",
+        "/home/handsfree/handsfree/handsfree_ros_ws/src/handsfree/handsfree_controller/include/**",
+        "/home/handsfree/handsfree/handsfree_ros_ws/src/handsfree/handsfree_hw/include/**",
+        "/home/handsfree/handsfree/handsfree_ros_ws/src/handsfree/handsfree_speech/include/**",
+        "/home/handsfree/handsfree/handsfree_ros_ws/src/handsfree/handsfree_driver/hokuyo_node/include/**",
+        "/home/handsfree/handsfree/handsfree_ros_ws/src/handsfree/handsfree_driver/ldlidar_stl_ros/include/**",
+        "/home/handsfree/handsfree/handsfree_ros_ws/src/handsfree/handsfree_driver/urg_node/include/**",
+        "/home/handsfree/catkin_ws/src/wpr_simulation/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
