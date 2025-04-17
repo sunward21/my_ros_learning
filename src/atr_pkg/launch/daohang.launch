@@ -1,0 +1,7 @@
+<launch>
+
+    <node pkg="ssr_pkg" type="chao_node" name="chao_node" />
+    <node pkg="ssr_pkg" type="lidar_node" name="lidar_node" launch-prefix="gnome-terminal -e"  />
+    <node pkg="atr_pkg" type="speed_node" name="speed_node"  output = "screen"/>
+    
+</launch>

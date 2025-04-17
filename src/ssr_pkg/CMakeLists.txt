@@ -209,3 +209,7 @@ add_executable(chao_node src/chao_node.cpp)
 target_link_libraries(chao_node
   ${catkin_LIBRARIES}
 )
+add_executable(lidar_node src/lidar_node.cpp)
+target_link_libraries(lidar_node
+  ${catkin_LIBRARIES}
+)

@@ -1,0 +1,7 @@
+<launch>
+
+    <node pkg="ssr_pkg" type="chao_node.py" name="chao_node"  />
+    <node pkg="ssr_pkg" type="lidar_node.py" name="lidar_node"   />
+    <node pkg="atr_pkg" type="speed_node.py" name="speed_node"  launch-prefix="gnome-terminal -e"/>
+    
+</launch>
