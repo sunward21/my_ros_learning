@@ -19,11 +19,12 @@ def lidar_callback(msg):
     if count > 0:
         count = count - 1
         rospy.logwarn("持续转向 count = %d",count)
+        vel_cmd.angular.z = 0.3
         return
     
     vel_cmd = Twist() #这里加括号是啥意思？
     if dist_front < 0.2 :
-        vel_cmd.angular.z = 1.5
+        vel_cmd.angular.z = 0.3
         count = 50
     else:
         vel_cmd.linear.x = 0.3
