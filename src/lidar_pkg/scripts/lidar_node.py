@@ -13,21 +13,20 @@ def lidar_callback(msg):
     dist_front = msg.ranges[305] #公司的是前180度分成610份，所以正前方应该是305
     dist_left = msg.ranges[609]
     dist_right = msg.ranges[0]
+    vel_cmd = Twist()
     rospy.loginfo("正前方测距数值 = %f 米",dist_front)
     rospy.loginfo("正左方测距数值 = %f 米",dist_left)
     rospy.loginfo("正右方测距数值 = %f 米",dist_right)
     if count > 0:
         count = count - 1
         rospy.logwarn("持续转向 count = %d",count)
-        vel_cmd.angular.z = 0.3
-        return
-    
-    vel_cmd = Twist() #这里加括号是啥意思？
-    if dist_front < 0.2 :
-        vel_cmd.angular.z = 0.3
-        count = 50
+        vel_cmd.angular.z = 0.4
     else:
-        vel_cmd.linear.x = 0.3
+        if 0<dist_front < 0.4:
+            vel_cmd.angular.z = 0.4
+            count = 40
+        else:
+            vel_cmd.linear.x = 0.1
 
     vel_pub.publish(vel_cmd)
     
