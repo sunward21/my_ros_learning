@@ -12,9 +12,9 @@ def lidar_callback(msg):
     # dist = msg.ranges[180]
     dist_front = msg.ranges[305] #公司的是前180度分成610份，所以正前方应该是305
     dist_left = msg.ranges[609]
-    dist_mid_left = msg.ranges[609]
+    dist_mid_left = msg.ranges[456]
     dist_right = msg.ranges[0]
-    dist_mid_right = msg.ranges[0]
+    dist_mid_right = msg.ranges[153]
     vel_cmd = Twist()
     rospy.loginfo("正前方测距数值 = %f 米",dist_front)
     rospy.loginfo("正左方测距数值 = %f 米",dist_left)
