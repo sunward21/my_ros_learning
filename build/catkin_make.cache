@@ -1,2 +1,2 @@
-atr_pkg:ssr_pkg:vel_pkg:wpr_simulation
+atr_pkg:lidar_pkg:ssr_pkg:vel_pkg:wpr_simulation
 -DCATKIN_DEVEL_PREFIX=/home/handsfree/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/handsfree/catkin_ws/install -G Unix Makefiles

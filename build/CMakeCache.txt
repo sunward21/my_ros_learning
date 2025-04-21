@@ -858,6 +858,12 @@ kdl_parser_DIR:PATH=/opt/ros/melodic/share/kdl_parser/cmake
 //Path to a library.
 lib:FILEPATH=/opt/ros/melodic/lib/libimage_transport.so
 
+//Value Computed by CMake
+lidar_pkg_BINARY_DIR:STATIC=/home/handsfree/catkin_ws/build/lidar_pkg
+
+//Value Computed by CMake
+lidar_pkg_SOURCE_DIR:STATIC=/home/handsfree/catkin_ws/src/lidar_pkg
+
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/melodic/share/message_filters/cmake
 
@@ -1293,7 +1299,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
