@@ -32,10 +32,11 @@ def lidar_callback(msg):
         #     vel_cmd.angular.z = 0.6  # 左转避开
         #     rospy.logwarn("动态左转避开右侧障碍")
                 
-        else:  # 维持原转向逻辑
-                vel_cmd.angular.z = last_action['angular']  
-                vel_cmd.linear.x = last_action['linear']
-                
+        # else:  # 维持原转向逻辑
+                # vel_cmd.angular.z = last_action['angular']  
+                # vel_cmd.linear.x = last_action['linear']
+        vel_cmd.angular.z = last_action['angular']  
+        vel_cmd.linear.x = last_action['linear']
         vel_pub.publish(vel_cmd)
         return  # 退出，避免进入后续判断
     else:
