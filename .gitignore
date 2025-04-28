@@ -1,0 +1,16 @@
+# 排除编译目录
+build/
+devel/
+
+# 排除IDE临时文件
+.vscode/
+.idea/
+
+# 排除日志和缓存
+*.log
+*.catkin
+*.cache
+
+# 排除二进制文件
+*.pyc
+__pycache__/
