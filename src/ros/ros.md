@@ -403,6 +403,7 @@ git push origin --delete master    # 删除旧分支
 ```
 
 ### 3. 提交被拒绝
+
 ```log
 ! [rejected] main -> main (non-fast-forward)
 ```
@@ -411,6 +412,61 @@ git push origin --delete master    # 删除旧分支
 git pull origin main        # 先合并远程变更
 git push origin main        # 重新推送
 ```
+
+### 4.使用 Git 子模块
+
+**适用场景**：保持他人项目独立，方便同步更新
+​**​操作步骤​**​：
+
+1. **删除当前空文==件夹==**（假设路径为 `external_project`）：
+
+   bash
+
+   复制
+
+   ```bash
+   rm -rf external_project  # 删除空文件夹
+   ```
+
+2. **添加子模块**（将别人的仓库挂载到你的项目中）：
+
+   bash
+
+   复制
+
+   ```bash
+   git submodule add https://github.com/other_user/external_project.git external_project
+   ```
+
+3. **提交变更**：
+
+   bash
+
+   复制
+
+   ```bash
+   git add .gitmodules external_project
+   git commit -m "添加外部项目作为子模块"
+   git push
+   ```
+
+4. **在其他设备克隆时初始化子模块**：
+
+   bash
+
+   复制
+
+   ```bash
+   git clone --recursive https://github.com/your_username/your_project.git
+   # 如果已克隆但未初始化：
+   git submodule update --init --recursive
+   ```
+
+**优点**：
+
+- 保留原项目独立提交历史
+- 可随时通过 `git submodule update` 同步更新
+- 明确区分代码归属
 
 ---
 
